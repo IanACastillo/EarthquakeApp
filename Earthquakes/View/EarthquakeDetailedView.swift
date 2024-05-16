@@ -12,7 +12,9 @@ import UIKit
 struct EarthquakeDetailView: View {
     let earthquake: Earthquake
     @State private var mapRegion = MKCoordinateRegion()
-    
+    private let minLatitudeDelta: CLLocationDegrees = 0.01
+    private let maxLatitudeDelta: CLLocationDegrees = 180.0
+
     var body: some View {
         VStack {
             MapView(coordinate: CLLocationCoordinate2D(
@@ -63,15 +65,15 @@ struct EarthquakeDetailView: View {
     
     private func zoomIn() {
         var span = mapRegion.span
-        span.latitudeDelta /= 2
-        span.longitudeDelta /= 2
+        span.latitudeDelta = max(span.latitudeDelta / 2, minLatitudeDelta)
+        span.longitudeDelta = max(span.longitudeDelta / 2, minLatitudeDelta)
         mapRegion.span = span
     }
     
     private func zoomOut() {
         var span = mapRegion.span
-        span.latitudeDelta *= 2
-        span.longitudeDelta *= 2
+        span.latitudeDelta = min(span.latitudeDelta * 2, maxLatitudeDelta)
+        span.longitudeDelta = min(span.longitudeDelta * 2, maxLatitudeDelta)
         mapRegion.span = span
     }
 }
