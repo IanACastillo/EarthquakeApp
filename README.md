@@ -64,4 +64,4 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 
 ## Contact
 
-For any questions or feedback, please contact [your-email@example.com].
+For any questions or feedback, please contact ian.abraham.castillo@gmail.com
