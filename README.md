@@ -2,6 +2,10 @@
 
 This Earthquake Monitoring app provides a list of recent significant earthquakes and displays their locations on a map. The app is built using SwiftUI and follows the MVVM architecture.
 
+## Requirements
+- Xcode 15.4 or later
+- iOS 14.0 or later
+
 ## Features
 
 - Fetches and displays a list of recent earthquakes with their magnitudes, locations, and times.

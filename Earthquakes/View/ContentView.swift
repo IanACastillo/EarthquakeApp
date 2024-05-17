@@ -17,9 +17,10 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text(earthquake.properties.place)
                             .font(.headline)
+                            .foregroundColor(.primary)
                         Text("Magnitude: \(earthquake.properties.mag, specifier: "%.1f")")
                             .font(.subheadline)
-                            .foregroundColor(earthquake.properties.mag >= 7.5 ? .red : .black)
+                            .foregroundColor(earthquake.properties.mag >= 7.5 ? .red : .primary)
                     }
                 }
             }
