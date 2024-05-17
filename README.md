@@ -12,6 +12,7 @@ This Earthquake Monitoring app provides a list of recent significant earthquakes
 - Earthquakes with a magnitude of 7.5 or higher are highlighted in red.
 - Tapping on an earthquake entry shows its location on a map.
 - The app is built using modern iOS development patterns and includes unit tests.
+- **iPad Support:** Fully optimized for iPad with a responsive layout.
 
 ## Technologies Used
 
