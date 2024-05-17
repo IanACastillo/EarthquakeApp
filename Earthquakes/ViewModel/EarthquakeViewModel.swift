@@ -8,25 +8,27 @@
 import Foundation
 import Combine
 
-class EarthquakeViewModel: ObservableObject {
-    @Published var earthquakes = [Earthquake]()
-    var cancellables = Set<AnyCancellable>()
-    
+final class EarthquakeViewModel: ObservableObject {
+    @Published private(set) var earthquakes = [Earthquake]()
+    private var cancellables = Set<AnyCancellable>()
+    @Published var isLoading = false
+    @Published var error: Error?
+
     init() {
-        fetchEarthquakes()
+        fetchEarthquakes(startTime: "2023-01-01", endTime: "2024-01-01", minMagnitude: 7.0)
     }
-    
-    func fetchEarthquakes() {
-        guard let url = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2023-01-01&endtime=2024-01-01&minmagnitude=7") else { return }
-        
-        URLSession.shared.dataTaskPublisher(for: url)
-            .map(\.data)
-            .decode(type: EarthquakeResponse.self, decoder: JSONDecoder())
+
+    func fetchEarthquakes(startTime: String, endTime: String, minMagnitude: Double) {
+        isLoading = true
+        error = nil
+
+        EarthquakeService.shared.fetchEarthquakes(startTime: startTime, endTime: endTime, minMagnitude: minMagnitude)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
+                self?.isLoading = false
                 switch completion {
                 case .failure(let error):
-                    print("Error fetching data: \(error)")
+                    self?.error = error
                 case .finished:
                     break
                 }
