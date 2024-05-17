@@ -12,8 +12,6 @@
 		48B018252BF68B7C0022EAEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B018242BF68B7C0022EAEE /* Assets.xcassets */; };
 		48B018292BF68B7C0022EAEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B018282BF68B7C0022EAEE /* Preview Assets.xcassets */; };
 		48B018332BF68B7C0022EAEE /* EarthquakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B018322BF68B7C0022EAEE /* EarthquakesTests.swift */; };
-		48B0183D2BF68B7C0022EAEE /* EarthquakesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0183C2BF68B7C0022EAEE /* EarthquakesUITests.swift */; };
-		48B0183F2BF68B7C0022EAEE /* EarthquakesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0183E2BF68B7C0022EAEE /* EarthquakesUITestsLaunchTests.swift */; };
 		48B0184C2BF6BF250022EAEE /* EarthquakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0184B2BF6BF250022EAEE /* EarthquakeModel.swift */; };
 		48B0184E2BF6BF500022EAEE /* EarthquakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0184D2BF6BF500022EAEE /* EarthquakeViewModel.swift */; };
 		48B018502BF6BF970022EAEE /* EarthquakeDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0184F2BF6BF970022EAEE /* EarthquakeDetailedView.swift */; };
@@ -47,8 +45,6 @@
 		48B0182E2BF68B7C0022EAEE /* EarthquakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B018322BF68B7C0022EAEE /* EarthquakesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesTests.swift; sourceTree = "<group>"; };
 		48B018382BF68B7C0022EAEE /* EarthquakesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		48B0183C2BF68B7C0022EAEE /* EarthquakesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesUITests.swift; sourceTree = "<group>"; };
-		48B0183E2BF68B7C0022EAEE /* EarthquakesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		48B0184B2BF6BF250022EAEE /* EarthquakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeModel.swift; sourceTree = "<group>"; };
 		48B0184D2BF6BF500022EAEE /* EarthquakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeViewModel.swift; sourceTree = "<group>"; };
 		48B0184F2BF6BF970022EAEE /* EarthquakeDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailedView.swift; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 			children = (
 				48B0181F2BF68B7A0022EAEE /* Earthquakes */,
 				48B018312BF68B7C0022EAEE /* EarthquakesTests */,
-				48B0183B2BF68B7C0022EAEE /* EarthquakesUITests */,
 				48B0181E2BF68B7A0022EAEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,15 +124,6 @@
 				48B018542BF6C7670022EAEE /* EarthquakeViewModelTests.swift */,
 			);
 			path = EarthquakesTests;
-			sourceTree = "<group>";
-		};
-		48B0183B2BF68B7C0022EAEE /* EarthquakesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				48B0183C2BF68B7C0022EAEE /* EarthquakesUITests.swift */,
-				48B0183E2BF68B7C0022EAEE /* EarthquakesUITestsLaunchTests.swift */,
-			);
-			path = EarthquakesUITests;
 			sourceTree = "<group>";
 		};
 		48B018512BF6C6DA0022EAEE /* View */ = {
@@ -316,8 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B0183D2BF68B7C0022EAEE /* EarthquakesUITests.swift in Sources */,
-				48B0183F2BF68B7C0022EAEE /* EarthquakesUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +458,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -482,7 +466,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ian.castillo.Earthquakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,7 +497,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -520,7 +505,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ian.castillo.Earthquakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
