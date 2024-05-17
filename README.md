@@ -4,7 +4,7 @@ This Earthquake Monitoring app provides a list of recent significant earthquakes
 
 ## Requirements
 - Xcode 15.2 or later
-- iOS 17.0 or later
+- iOS 16.0 or later
 
 ## Features
 
